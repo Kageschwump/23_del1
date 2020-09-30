@@ -1,8 +1,8 @@
 package Models;
 
 public class ShuffleCup {
-    Dice dice1 = new Dice(3);
-    Dice dice2 = new Dice(3);
+    Dice dice1;
+    Dice dice2;
     int value;
 
     //Constructor
