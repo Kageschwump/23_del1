@@ -1,4 +1,4 @@
-package Dice;
+package Models;
 
 public class Dice {
     private final int MAX = 6;  // maximum face value

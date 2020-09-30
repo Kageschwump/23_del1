@@ -1,4 +1,4 @@
-package Player;
+package Models;
 
 public class Player {
     String name;
