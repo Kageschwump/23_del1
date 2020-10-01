@@ -6,7 +6,9 @@ public class ShuffleCup {
     private int value;
 
     //Constructor
-    public ShuffleCup(Dice dice1, Dice dice2){
+    public ShuffleCup(){
+        Dice dice1 = new Dice(3);
+        Dice dice2 = new Dice(3);
         this.dice1 = dice1;
         this.dice2 = dice2;
 
@@ -20,6 +22,7 @@ public class ShuffleCup {
 
     }
 
+    //checks if the 2 dice show the same value
     public void checkDouble(){
         boolean sametwo;
         if(dice1.getFaceValue()==dice2.getFaceValue()){
@@ -30,6 +33,7 @@ public class ShuffleCup {
         }
     }
 
+    //getter
     public int showRoll(){
         return value;
     }
