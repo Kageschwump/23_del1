@@ -62,6 +62,7 @@ public class DiceGame {
 
             if(checkSameCombination(shuffleCup))
             {
+                System.out.println(player1.getName() + " WINS!");
                 return true;
             }
 
@@ -72,6 +73,7 @@ public class DiceGame {
 
             if(checkSameCombination(shuffleCup))
             {
+                System.out.println(player2.getName() + " WINS!");
                 return true;
             }
         }
