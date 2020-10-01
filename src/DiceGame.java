@@ -19,31 +19,34 @@ public class DiceGame {
 
         while(!gameOver(player1, player2, shuffleCup)) {
 
-            System.out.println(player1.getName() + " Score is: " + player1.getScore());
-            System.out.println("Press '1' to roll");
-            if (input.nextInt() == 1) {                                             //Player 1's turn
-                int roll = shuffleCup.roll();
-                player1.updateScore(roll);
-                shuffleCup.showRoll();
-                System.out.println(player1.getName() + "'s new score is: " + player1.getScore());
+            playerturn(player1,input,shuffleCup);
 
-            }
             if(gameOver(player1, player2, shuffleCup))
             {
                 break;
             }
-            System.out.println(player2.getName() + " Score is: " + player2.getScore());
-            System.out.println("Press '2' to roll");
-            if (input.nextInt() == 2) {                                             //Player 2's turn
-                int roll = shuffleCup.roll();
-                player2.updateScore(roll);
-                shuffleCup.showRoll();
-                System.out.println(player2.getName() + "'s new score is: " + player2.getScore());
 
-            }
+            playerturn(player2,input,shuffleCup);
 
         }
 
+    }
+
+    public void playerturn(Player player,Scanner input, ShuffleCup shuffleCup)
+    {
+        System.out.println(player.getName() + " Score is: " + player.getScore());
+        System.out.println("Press 'Enter' to roll");
+        // We use the try catch method to handle any given exception, if values does not comply with read()
+        try {
+            System.in.read();
+        } catch (Exception e)
+        {
+            System.out.println(e);
+        }
+        int roll = shuffleCup.roll();
+        player.updateScore(roll);
+        shuffleCup.showRoll();
+        System.out.println(player.getName() + "'s new score is: " + player.getScore());
     }
 
     public void deleteScore()
