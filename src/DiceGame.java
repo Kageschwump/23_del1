@@ -54,14 +54,20 @@ public class DiceGame {
         int roll = shuffleCup.roll();
         player.updateScore(roll);
         shuffleCup.showRoll();
-        System.out.println(player.getName() + "'s new score is: " + player.getScore());
+
+        if(shuffleCup.getDice1().getFaceValue() == 1 && shuffleCup.getDice2().getFaceValue() == 1) {
+            player.setScore(0);
+            System.out.println(player.getName() + " loses all of their points");
+        }
+
 
         //If the player rolls a pair, the player gets another turn
-        if(checkSameCombination(shuffleCup) && !gameOver(player, shuffleCup)){
+        else if(checkSameCombination(shuffleCup) && !gameOver(player, shuffleCup)){
             System.out.println(player.getName() + " gets another turn!");
             playerturn(player, shuffleCup);
         }
         else {
+            System.out.println(player.getName() + "'s new score is: " + player.getScore());
             System.out.println("-----------------------------------------------");
         }
 
