@@ -16,7 +16,7 @@ public class DiceGame {
         System.out.print("Player 2 name: ");
         Player player2 = game.createPlayer(2, input.nextLine());
         ShuffleCup shuffleCup = game.createShuffleCup();
-        input.close();
+
 
         while(!gameOver(player2, shuffleCup)) {
 
