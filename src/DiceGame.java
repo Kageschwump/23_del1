@@ -16,23 +16,24 @@ public class DiceGame {
         System.out.print("Player 2 name: ");
         Player player2 = game.createPlayer(2, input.nextLine());
         ShuffleCup shuffleCup = game.createShuffleCup();
+        input.close();
 
-        while(!gameOver(player1, player2, shuffleCup)) {
+        while(!gameOver(player2, shuffleCup)) {
 
-            playerturn(player1,input,shuffleCup);
+            playerturn(player1,shuffleCup);
 
-            if(gameOver(player1, player2, shuffleCup))
+            if(gameOver(player1, shuffleCup))
             {
                 break;
             }
 
-            playerturn(player2,input,shuffleCup);
+            playerturn(player2,shuffleCup);
 
         }
 
     }
 
-    public void playerturn(Player player,Scanner input, ShuffleCup shuffleCup)
+    public void playerturn(Player player, ShuffleCup shuffleCup)
     {
         System.out.println(player.getName() + " Score is: " + player.getScore());
         System.out.println("Press 'Enter' to roll");
@@ -55,28 +56,20 @@ public class DiceGame {
     }
 
     //Checks if game is over, if a players score is above 40 and checks if dices are a pair
-    public boolean gameOver(Player player1, Player player2, ShuffleCup shuffleCup)
+    public boolean gameOver(Player player, ShuffleCup shuffleCup)
     {
-        if(player1.getScore()>=wincondition)
+        if(player.getScore()>=wincondition)
         {
 
             if(checkSameCombination(shuffleCup))
             {
-                System.out.println(player1.getName() + " WINS!");
+                System.out.println(player.getName() + " WINS!");
                 return true;
+
             }
 
         }
 
-        if(player2.getScore()>=wincondition)
-        {
-
-            if(checkSameCombination(shuffleCup))
-            {
-                System.out.println(player2.getName() + " WINS!");
-                return true;
-            }
-        }
         return false;
     }
 
