@@ -21,9 +21,4 @@ public class GameManager {
         return shufflecup;
     }
 
-    public void updateScore(Player player)
-    {
-        player.updateScore();
-    }
-
 }
