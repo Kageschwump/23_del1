@@ -18,16 +18,23 @@ public class DiceGame {
         ShuffleCup shuffleCup = game.createShuffleCup();
 
 
-        while(!gameOver(player2, shuffleCup)) {
+
+        while(true){
 
             playerturn(player1,shuffleCup);
 
             if(gameOver(player1, shuffleCup))
             {
+                System.out.println(player1.getName() + " WINS!");
                 break;
             }
 
             playerturn(player2,shuffleCup);
+            if(gameOver(player2, shuffleCup))
+            {
+                System.out.println(player2.getName() + " WINS!");
+                break;
+            }
 
         }
 
@@ -65,16 +72,9 @@ public class DiceGame {
     //Checks if game is over, if a players score is above 40 and checks if dices are a pair
     public boolean gameOver(Player player, ShuffleCup shuffleCup)
     {
-        if(player.getScore()>=wincondition)
+        if(player.getScore()>=wincondition&&checkSameCombination(shuffleCup))
         {
-
-            if(checkSameCombination(shuffleCup))
-            {
-                System.out.println(player.getName() + " WINS!");
                 return true;
-
-            }
-
         }
 
         return false;
