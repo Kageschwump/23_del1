@@ -1,6 +1,7 @@
 package Models;
 
 public class Player {
+
     String name;
     int id;
     int score;
@@ -19,5 +20,9 @@ public class Player {
 
     public int getScore(){
         return score;
+    }
+
+    public String getName() {
+        return name;
     }
 }
