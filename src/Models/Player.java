@@ -13,7 +13,11 @@ public class Player {
     }
 
     //Method for updating players score
-    public void UpdateScore(int CurrentFaceValue){
+    public void updateScore(int CurrentFaceValue){
         score += CurrentFaceValue;
+    }
+
+    public int getScore(){
+        return score;
     }
 }
