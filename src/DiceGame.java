@@ -35,7 +35,7 @@ public class DiceGame {
 
     public void playerturn(Player player, ShuffleCup shuffleCup)
     {
-        System.out.println(player.getName() + " Score is: " + player.getScore());
+        System.out.println(player.getName() + "'s Score is: " + player.getScore());
         System.out.println("Press 'Enter' to roll");
         // We use the try catch method to handle any given exception, if values does not comply with read()
         try {
@@ -48,6 +48,13 @@ public class DiceGame {
         player.updateScore(roll);
         shuffleCup.showRoll();
         System.out.println(player.getName() + "'s new score is: " + player.getScore());
+
+        //If the player rolls a pair, the player gets another turn
+        if(checkSameCombination(shuffleCup) && !gameOver(player, shuffleCup)){
+            System.out.println(player.getName() + " gets another turn!");
+            playerturn(player, shuffleCup);
+        }
+
     }
 
     public void deleteScore()
