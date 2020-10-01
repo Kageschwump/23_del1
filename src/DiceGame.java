@@ -61,6 +61,9 @@ public class DiceGame {
             System.out.println(player.getName() + " gets another turn!");
             playerturn(player, shuffleCup);
         }
+        else {
+            System.out.println("-----------------------------------------------");
+        }
 
     }
 
@@ -69,7 +72,7 @@ public class DiceGame {
 
     }
 
-    //Checks if game is over, if a players score is above 40 and checks if dices are a pair
+    //Checks if game is over, which it is if a players score is above 40 and the two dice are a pair
     public boolean gameOver(Player player, ShuffleCup shuffleCup)
     {
         if(player.getScore()>=wincondition&&checkSameCombination(shuffleCup))
