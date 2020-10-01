@@ -1,4 +1,5 @@
 import Models.Player;
+import Models.ShuffleCup;
 
 import java.util.Scanner;
 
@@ -14,10 +15,19 @@ public class DiceGame {
         Player player1 = game.createPlayer(1, input.nextLine());
         System.out.print("Player 2 name: ");
         Player player2 = game.createPlayer(2, input.nextLine());
+        ShuffleCup shuffleCup = game.createShuffleCup();
 
-        while(true)
+        while(!gameOver(player1, player2))
         {
+            System.out.println(player1.getName() +" Score is: " + player1.getScore());
+            System.out.println("Press '1' to roll");
+            if(input.nextInt() == 1)
+            {
+                int roll = shuffleCup.roll();
+                player1.updateScore(roll);
+                shuffleCup.showRoll();
 
+            }
 
         }
 

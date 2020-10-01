@@ -34,8 +34,8 @@ public class ShuffleCup {
     }
 
     //getter
-    public int showRoll(){
-        return value;
+    public void showRoll(){
+        System.out.println(dice1.getFaceValue() + " " + dice2.getFaceValue());;
     }
 
 
