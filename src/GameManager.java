@@ -10,13 +10,13 @@ public class GameManager {
         Player player = new Player(20, "En Dreng eller pige");
         return player;
     }
-    public ShuffleCup createShuffleCup()
+    public void createShuffleCup()
     {
-        return
+        return;
     }
     public void updateScore(Player player1, Player player2)
     {
-        player1
+        Player player = player1;
     }
 
 }
