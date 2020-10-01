@@ -11,7 +11,7 @@ public class GameManager {
 
     public Player createPlayer(int id, String name)
     {
-        Player player = new Player(20, "En Dreng eller pige");
+        Player player = new Player(id,name);
         return player;
     }
 
