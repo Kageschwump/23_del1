@@ -1,9 +1,11 @@
 package Models;
 
 public class Dice {
-    private final int MAX = 6;  // maximum face value
+    // maximum face value
+    private final int MAX = 6;
 
-    private int faceValue;  // Current face value
+    // Current face value
+    private int faceValue;
 
     // Constructor
     public Dice(int value) {
