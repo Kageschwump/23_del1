@@ -28,7 +28,10 @@ public class DiceGame {
                 System.out.println(player1.getName() + "'s new score is: " + player1.getScore());
 
             }
-
+            if(gameOver(player1, player2, shuffleCup))
+            {
+                break;
+            }
             System.out.println(player2.getName() + " Score is: " + player2.getScore());
             System.out.println("Press '2' to roll");
             if (input.nextInt() == 2) {                                             //Player 2's turn
