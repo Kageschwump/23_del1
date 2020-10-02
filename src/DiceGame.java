@@ -66,7 +66,7 @@ public class DiceGame {
         }
         int roll = shuffleCup.roll();
 
-        //this if statement checks if the player has rolled two pairs of 6's in a row
+        //This if statement checks if the player has rolled two pairs of 6's in a row
         if(shuffleCup.getLastRoll()==12 && roll == 12){
             winWith2Pairs = true;
             return;
@@ -76,7 +76,7 @@ public class DiceGame {
         shuffleCup.showRoll();
 
 
-        // if a player hits a pair of ones, the player loses all their points
+        //If a player hits a pair of ones, the player loses all their points
         if(shuffleCup.getDice1().getFaceValue() == 1 && shuffleCup.getDice2().getFaceValue() == 1) {
             player.setScore(0);
             System.out.println(player.getName() + " loses all of their points");

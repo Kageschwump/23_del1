@@ -1,7 +1,7 @@
 package Models;
 
 public class Dice {
-    // maximum face value
+    // Maximum face value
     private final int MAX = 6;
 
     // Current face value
@@ -18,17 +18,17 @@ public class Dice {
         return faceValue;
     }
 
-    // setter
+    // Setter
     public void setFaceValue (int value) {
         faceValue = value;
     }
 
-    // getter
+    // Getter
     public int getFaceValue() {
         return faceValue;
     }
 
-    // return face value as a String
+    // Return face value as a String
     public String toString() {
         String result = "you rolled: " + faceValue;
         return result;
