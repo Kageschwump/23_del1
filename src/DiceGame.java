@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class DiceGame {
 
     int wincondition = 40;
+    boolean winWith2Pairs = false;
 
     public void createDiceGame()
     {
@@ -19,9 +20,15 @@ public class DiceGame {
 
 
 
+
         while(true){
 
             playerturn(player1,shuffleCup);
+
+            if(winWith2Pairs){
+                System.out.println(player1.getName() + " WINS!");
+                break;
+            }
 
             if(gameOver(player1, shuffleCup))
             {
@@ -30,6 +37,12 @@ public class DiceGame {
             }
 
             playerturn(player2,shuffleCup);
+
+            if(winWith2Pairs){
+                System.out.println(player1.getName() + " WINS!");
+                break;
+            }
+
             if(gameOver(player2, shuffleCup))
             {
                 System.out.println(player2.getName() + " WINS!");
@@ -52,9 +65,16 @@ public class DiceGame {
             System.out.println(e);
         }
         int roll = shuffleCup.roll();
+        if(shuffleCup.getLastRoll()==12 && roll == 12){
+            winWith2Pairs = true;
+            return;
+        }
+        shuffleCup.setLastRoll(shuffleCup.getDice1().getFaceValue() + shuffleCup.getDice2().getFaceValue());
         player.updateScore(roll);
         shuffleCup.showRoll();
 
+
+        // if a player hits a pair of ones, the player loses all their points
         if(shuffleCup.getDice1().getFaceValue() == 1 && shuffleCup.getDice2().getFaceValue() == 1) {
             player.setScore(0);
             System.out.println(player.getName() + " loses all of their points");
