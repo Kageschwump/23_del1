@@ -6,12 +6,12 @@ public class ShuffleCup {
     private int value;
     private int lastRoll;
 
-    //setter for lastroll
+    //setter for lastRoll
     public void setLastRoll(int lastRoll) {
         this.lastRoll = lastRoll;
     }
 
-    //getter for lastroll
+    //getter for lastRoll
     public int getLastRoll() {
         return lastRoll;
     }
