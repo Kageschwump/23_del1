@@ -4,6 +4,17 @@ public class ShuffleCup {
     private Dice dice1;
     private Dice dice2;
     private int value;
+    private int lastRoll;
+
+    //setter for lastroll
+    public void setLastRoll(int lastRoll) {
+        this.lastRoll = lastRoll;
+    }
+
+    //getter for lastroll
+    public int getLastRoll() {
+        return lastRoll;
+    }
 
     //Constructor
     public ShuffleCup(){

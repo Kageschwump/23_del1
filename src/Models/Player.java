@@ -29,4 +29,6 @@ public class Player {
     public void setScore(int value){
         score = value;
     }
+
+
 }
