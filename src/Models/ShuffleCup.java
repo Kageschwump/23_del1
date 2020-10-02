@@ -38,10 +38,12 @@ public class ShuffleCup {
         System.out.println(dice1.getFaceValue() + " " + dice2.getFaceValue());;
     }
 
+    //getter for dice1
     public Dice getDice1() {
         return dice1;
     }
 
+    //getter for dice 2
     public Dice getDice2() {
         return dice2;
     }

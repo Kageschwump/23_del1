@@ -18,7 +18,8 @@ public class DiceGame {
         Player player2 = game.createPlayer(2, input.nextLine());
         ShuffleCup shuffleCup = game.createShuffleCup();
 
-
+        //This infinite while loop will keep alternating between the 2 players turns, until one of the players
+        //wins the game
         while(true){
 
             playerturn(player1,shuffleCup);
@@ -51,6 +52,7 @@ public class DiceGame {
 
     }
 
+    //Here we define how a players turn is supposed to run
     public void playerturn(Player player, ShuffleCup shuffleCup)
     {
         System.out.println(player.getName() + "'s Score is: " + player.getScore());
@@ -63,6 +65,8 @@ public class DiceGame {
             System.out.println(e);
         }
         int roll = shuffleCup.roll();
+
+        //this if statement checks if the player has rolled two pairs of 6's in a row
         if(shuffleCup.getLastRoll()==12 && roll == 12){
             winWith2Pairs = true;
             return;

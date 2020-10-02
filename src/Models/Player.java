@@ -18,14 +18,17 @@ public class Player {
         score += CurrentFaceValue;
     }
 
+    //getter for players score
     public int getScore(){
         return score;
     }
 
+    //getter for players name
     public String getName() {
         return name;
     }
 
+    //setter for players score
     public void setScore(int value){
         score = value;
     }
