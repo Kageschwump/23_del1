@@ -58,6 +58,7 @@ public class DiceGame {
         if(shuffleCup.getDice1().getFaceValue() == 1 && shuffleCup.getDice2().getFaceValue() == 1) {
             player.setScore(0);
             System.out.println(player.getName() + " loses all of their points");
+            System.out.println("-----------------------------------------------");
         }
 
 

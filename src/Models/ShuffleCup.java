@@ -22,7 +22,7 @@ public class ShuffleCup {
 
     }
 
-    //Printer facevalue af de 2 terninger
+    //Prints the face value of the 2 dice
     public void showRoll(){
         System.out.println(dice1.getFaceValue() + " " + dice2.getFaceValue());;
     }
