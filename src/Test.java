@@ -19,7 +19,7 @@ public class Test {
         int toEns = 0;
 
 
-        for (int x = 0; x < 100; x++) {
+        for (int x = 0; x < 1000; x++) {
             int roll = shuffleCup.roll();
 
             if (roll == 2) {
