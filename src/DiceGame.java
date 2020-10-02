@@ -19,8 +19,6 @@ public class DiceGame {
         ShuffleCup shuffleCup = game.createShuffleCup();
 
 
-
-
         while(true){
 
             playerturn(player1,shuffleCup);
@@ -94,11 +92,6 @@ public class DiceGame {
 
     }
 
-    public void deleteScore()
-    {
-
-    }
-
     //Checks if game is over, which it is if a players score is above 40 and the two dice are a pair
     public boolean gameOver(Player player, ShuffleCup shuffleCup)
     {
@@ -110,10 +103,7 @@ public class DiceGame {
         return false;
     }
 
-    public void extraTurn()
-    {
-
-    }
+    //Checks if the dice are a pair
     public boolean checkSameCombination(ShuffleCup shuffleCup)
     {
         boolean sametwo;
