@@ -19,50 +19,50 @@ public class Test {
         int toEns = 0;
 
 
-        for (int x = 100000; x > 0; x--) {
-            shuffleCup.roll();
+        for (int x = 0; x < 100; x++) {
+            int roll = shuffleCup.roll();
 
-            if (shuffleCup.roll() == 2) {
+            if (roll == 2) {
                 to += 1;
             }
 
-            if (shuffleCup.roll() == 3) {
+            if (roll == 3) {
                 tre += 1;
             }
 
-            if (shuffleCup.roll() == 4) {
+            if (roll == 4) {
                 fire += 1;
             }
 
-            if (shuffleCup.roll() == 5) {
+            if (roll == 5) {
                 fem += 1;
             }
 
-            if (shuffleCup.roll() == 6) {
+            if (roll == 6) {
                 seks += 1;
             }
 
-            if (shuffleCup.roll() == 7) {
+            if (roll == 7) {
                 syv += 1;
             }
 
-            if (shuffleCup.roll() == 8) {
+            if (roll == 8) {
                 otte += 1;
             }
 
-            if (shuffleCup.roll() == 9) {
+            if (roll == 9) {
                 ni += 1;
             }
 
-            if (shuffleCup.roll() == 10) {
+            if (roll == 10) {
                 ti += 1;
             }
 
-            if (shuffleCup.roll() == 11) {
+            if (roll == 11) {
                 elleve += 1;
             }
 
-            if (shuffleCup.roll() == 12) {
+            if (roll == 12) {
                 tolv += 1;
             }
 
